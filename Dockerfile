@@ -4,6 +4,7 @@ RUN apt-get update \
     && apt-get install -y \
                        wget \
                        gcc \
+                       libffi-dev \
                        gnupg \
     && wget -q -O - https://apt.mopidy.com/mopidy.gpg | apt-key add - \
     && wget -q -O /etc/apt/sources.list.d/mopidy.list https://apt.mopidy.com/jessie.list \
@@ -32,6 +33,8 @@ RUN apt-get update \
     && apt-get purge --auto-remove -y \
         wget \
         gcc \
+        libffi-dev \
+    && apt-get install libffi \
     && apt-get clean \              
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache
                  
