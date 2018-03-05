@@ -30,7 +30,6 @@ RUN apt-get update \
                   mopidy-bassdrive \
                   mopidy-gmusic \
                   Mopidy-SoundCloud \
-                  Mopidy-Spotify \
     && apt-get purge --auto-remove -y \
         wget \
         gcc \
