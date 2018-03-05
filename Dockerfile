@@ -33,9 +33,8 @@ RUN apt-get update \
     && apt-get purge --auto-remove -y \
         wget \
         gcc \
-        libffi-dev \
         libasound2-dev \
-    && apt-get install libffi libasound2 \
+    && apt-get install libasound2 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache
 
