@@ -8,4 +8,4 @@ pip install youtube-dl && pip install Mopidy-Youtube
 pip install Mopidy-Podcast
 pip install Mopidy-Podcast-iTunes
 
-mopidy --config /etc/mopidy/mopidy.conf local scan && mopidy --config /etc/mopidy/mopidy.conf
+mopidy --config /root/.config/mopidy/mopidy.conf local scan && mopidy --config /root/.config/mopidy/mopidy.conf
