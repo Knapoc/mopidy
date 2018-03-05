@@ -10,7 +10,7 @@ RUN apt-get update \
       && apt-get install -y \
                          python-pip \
                          mopidy \
-    && pip install mopidy-moped
+    && pip install mopidy-moped \
     && apt-get purge --auto-remove -y \
         wget \
     && apt-get clean \
