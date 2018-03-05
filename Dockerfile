@@ -5,6 +5,7 @@ RUN apt-get update \
                        wget \
                        gcc \
                        libffi-dev \
+                       libasound2-dev \
                        gnupg \
     && wget -q -O - https://apt.mopidy.com/mopidy.gpg | apt-key add - \
     && wget -q -O /etc/apt/sources.list.d/mopidy.list https://apt.mopidy.com/jessie.list \
@@ -34,10 +35,11 @@ RUN apt-get update \
         wget \
         gcc \
         libffi-dev \
-    && apt-get install libffi \
-    && apt-get clean \              
+        libasound2-dev \
+    && apt-get install libffi libasound2 \
+    && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache
-                 
+
 CMD ["mopidy","--config /root/.config/mopidy/mopidy.conf"]
 #COPY start.sh /start.sh
 
